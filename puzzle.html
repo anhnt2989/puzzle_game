@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>puzzle</title>
+</head>
+<style>
+    img {
+        display: block;
+        margin: 1em;
+        width: 600px;
+    }
+</style>
+<body>
+<div class="ctn">
+    <img src="gau1.jpg" id="g1" alt="" onclick="swapimg1();"/>
+    <img src="gau2.jpg" id="g2" alt="" onclick="swapimg2();"/>
+    <img src="gau3.jpg" id="g3" alt="" onclick="swapimg3();"/>
+    <img src="gau4.jpg" id="g4" alt="" onclick="swapimg4();"/>
+    <img src="gau5.jpg" id="g5" alt="" onclick="swapimg5();"/>
+</div>
+<script>
+    let img1 = document.getElementById("g1");
+    let img2 = document.getElementById("g2");
+    let img3 = document.getElementById("g3");
+    let img4 = document.getElementById("g4");
+    let img5 = document.getElementById("g5");
+    let image1 = "gau1";
+    let image2 = "gau2";
+    let image3 = "gau3";
+    let image4 = "gau4";
+    let image5 = "gau5";
+    function swapimg1() {
+        if (image1 === "gau1") {
+            image1 = "meo1";
+        } else if (image1 === "meo1") {
+            image1 = "khi1";
+        } else if (image1 === "khi1") {
+            image1 = "gau1";
+        } img1.src = image1 + ".jpg";
+    }
+    function swapimg2() {
+        if (image2 === "gau2") {
+            image2 = "meo2";
+        } else if (image2 === "meo2") {
+            image2 = "khi2";
+        } else if (image2 === "khi2") {
+            image2 = "gau2";
+        } img2.src = image2 + ".jpg";
+    }
+    function swapimg3() {
+        if (image3 === "gau3") {
+            image3 = "meo3";
+        } else if (image3 === "meo3") {
+            image3 = "khi3";
+        } else if (image3 === "khi3") {
+            image3 = "gau3";
+        } img3.src = image3 + ".jpg";
+    }
+    function swapimg4() {
+        if (image4 === "gau4") {
+            image4 = "meo4";
+        } else if (image4 === "meo4") {
+            image4 = "khi4";
+        } else if (image4 === "khi4") {
+            image4 = "gau4";
+        } img4.src = image4 + ".jpg";
+    }
+    function swapimg5() {
+        if (image5 === "gau5") {
+            image5 = "meo5";
+        } else if (image5 === "meo5") {
+            image5 = "khi5";
+        } else if (image5 === "khi5") {
+            image5 = "gau5";
+        }
+        img5.src = image5 + ".jpg";
+        if (image1 === "gau1" && image2 === "gau2" && image3 === "gau3" && image4 === "gau4" && image5 === "gau5") {
+            alert("Chuẩn rồi đới!");
+        } else if (image1 === "meo1" && image2 === "meo2" && image3 === "meo3" && image4 === "meo4" && image5 === "meo5") {
+            alert("Chuẩn rồi đới!");
+        } else if (image1 === "khi1" && image2 === "khi2" && image3 === "khi3" && image4 === "khi4" && image5 === "khi5") {
+            alert("Chuẩn rồi đới!");
+        } else {
+            alert ("Xem lại đê!");
+        }
+    }
+</script>
+</body>
+</html>
